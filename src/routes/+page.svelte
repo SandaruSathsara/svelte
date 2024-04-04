@@ -5,14 +5,14 @@ import Footer from "$lib/Components/Footer.svelte";
 
 </script>
 
-<Navbar/>
+<Navbar {data}/>
 <div>
 
 </div>
 <style></style>
 
 <h1>Welcome </h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<p>Visit <a href="https://www.nike.com/">Nike,Inc.</a></p>
 
 
 <Footer/>
