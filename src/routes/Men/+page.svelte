@@ -13,13 +13,12 @@
   }
 
   function cart() {
-
-    console.log("Item is successfully added to the cart!");
+    if (count > 0) {
+      alert("Item is successfully added to the cart!");
+    }
   }
 
 </script>
-
-
 
 
 <div class="container">
@@ -35,8 +34,10 @@
       <button on:click={increaseCount}>+</button>
     </div>
   
-    
-    <button class="cart-button" on:click={cart}>Add to Cart</button>
+
+        <button class="cart-button" on:click={cart}>Add to Cart</button>
+
+
   </div>
 
   <style>
