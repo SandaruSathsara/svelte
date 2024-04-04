@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-    
+    connected
 </footer>
 
 <style>

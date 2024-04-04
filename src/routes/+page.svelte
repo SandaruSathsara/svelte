@@ -1,9 +1,11 @@
 <script>
-
+//import Navbar from "$lib/Components/Navbar.svelte";
 import Footer from "$lib/Components/Footer.svelte";
+import Header from "$lib/Components/Header.svelte";
 
 </script>
 
+<Header/>
 
 <div>
 
