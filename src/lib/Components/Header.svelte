@@ -1,6 +1,6 @@
 <script>
 
-
+import { page } from "$app/stores";
 
 </script>
 
@@ -8,8 +8,6 @@
 
 <div class = "topnav">
 
-    
-    
     <div class="nav-links">
         <a href="/" class="active">Home</a> 
         <a href="/Men">Men</a>  
