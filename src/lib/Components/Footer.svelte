@@ -18,6 +18,9 @@
   color: white;
   text-align: center;
 }
-      
+
+p {
+    font-size: 20px;
+}
     
 </style>

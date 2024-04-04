@@ -74,6 +74,19 @@
     font-size: 20px;
     padding: 10px 20px;
     cursor: pointer;
+    background-color: blue; 
+    color: white; 
+    border-radius: 10px; 
+    border: none; 
+    transition: background-color 0.3s ease; 
+  }
+
+  .cart-button:hover {
+    background-color: #007bff; 
+  }
+
+  .cart-button:active {
+    background-color: #0056b3; 
   }
 
   </style>
