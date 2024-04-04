@@ -1,22 +1,21 @@
 <script>
 
-function myFunction(){
 
-
-}
 
 </script>
 
 
 
 <div class = "topnav">
-    <a  href="home" class="active">Home</a> 
-    <a  href="men">Men</a>  
-    <a  href="women">Women</a>  
-    <a  href="about">About</a>  
-    
-    <i class = "fa fa-bars"></i>
 
+    
+    
+    <div class="nav-links">
+        <a href="/" class="active">Home</a> 
+        <a href="/Men">Men</a>  
+        <a href="/Women">Women</a>  
+        <a href="/About">About</a>  
+    </div>
 
 </div>
 
@@ -46,6 +45,21 @@ function myFunction(){
 
         background-color: #ddd;
         color: black;
+    }
+
+    .topnav a.active{
+
+        background-color: greenyellow;
+        color: white;
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .topnav {
+            flex-direction: column; 
+            align-items: flex-start; 
+        }
+
     }
 
 </style>
