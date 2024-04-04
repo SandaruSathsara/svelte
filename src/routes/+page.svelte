@@ -1,11 +1,10 @@
 <script>
-import Navbar from "$lib/Components/Navbar.svelte";
-import { navbarData } from "../utils/linkUtil";
+
 import Footer from "$lib/Components/Footer.svelte";
 
 </script>
 
-<Navbar {data}/>
+
 <div>
 
 </div>

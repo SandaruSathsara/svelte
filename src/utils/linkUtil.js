@@ -1,4 +1,4 @@
-import Navbar from "$lib/Components/Navbar.svelte";
+//import Navbar from "$lib/Components/Navbar.svelte";
 import nikelogo from "../assets/nike.png";
 
 export const navbarData = {
