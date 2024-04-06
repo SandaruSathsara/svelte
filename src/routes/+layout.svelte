@@ -8,6 +8,6 @@
 
 <main>
     
-    <slot></slot>
+<slot></slot>
 </main>
 <Footer />
