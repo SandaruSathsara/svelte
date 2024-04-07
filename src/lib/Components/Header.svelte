@@ -80,8 +80,19 @@ import { page } from "$app/stores";
             align-items: flex-start; 
         }
 
-    }
+        .nav-links {
+            flex-direction: column;
+            align-items: center;
+        }
 
+        .topnav a {
+            padding: 10px;
+        }
+
+        .cart-icon {
+            margin-top: 10px;
+        }
+    }
     
 
 </style>

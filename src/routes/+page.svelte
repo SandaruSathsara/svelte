@@ -1,7 +1,6 @@
 <script>
-
-import {Router, Link, Route } from 'svelte-routing';    
-let flipped = false;
+ 
+ let flipped = false;
 
 </script>
 
@@ -18,11 +17,12 @@ let flipped = false;
     >
         <div class="front">
             <!-- svelte-ignore a11y-img-redundant-alt -->
-            <img src="../src/assets/Front.png" alt="Front Image" style="max-width: 100%; max-height: 100%;"/>
+			<img src="../src/assets/Front.png" alt="" style="max-width: 100%; max-height: 100%;"/>
+			
         </div>
         <div class="back">
             <!-- svelte-ignore a11y-img-redundant-alt -->
-            <img src="../src/assets/Full.jpeg" alt="Back Image" style="max-width: 100%; max-height: 100%;"/>
+            <img src="../src/assets/Full.jpeg" alt="" style="max-width: 100%; max-height: 100%;"/>
         </div>
     </button>
 </div>

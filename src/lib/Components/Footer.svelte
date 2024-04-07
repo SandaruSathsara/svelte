@@ -17,10 +17,11 @@
   background-color: #333;
   color: white;
   text-align: center;
+  padding: 10px 0; 
 }
 
 p {
-    font-size: 20px;
+    font-size: 1em; 
 }
-    
+
 </style>
