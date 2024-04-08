@@ -17,6 +17,11 @@
             <button type="submit">Login</button>
         </div>
     </form>
+
+    <div class="sign-up-link">
+        <p>Don't have an account? <a href="/Sign Up">Sign Up</a></p>
+    </div>
+
 </div>
 
 
@@ -67,5 +72,25 @@
     button:hover {
         background-color: greenyellow;
     }
-    
+
+    .sign-up-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .sign-up-link a {
+        color: greenyellow;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+
+    .sign-up-link a:hover {
+        text-decoration: underline;
+    }
+
+    p{
+
+       font-family: sans-serif;
+     }
+
 </style>
