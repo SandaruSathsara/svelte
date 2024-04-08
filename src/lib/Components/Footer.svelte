@@ -18,10 +18,13 @@
   color: white;
   text-align: center;
   padding: 10px 0; 
+  z-index: 1000;
 }
 
 p {
     font-size: 1em; 
 }
+
+
 
 </style>
