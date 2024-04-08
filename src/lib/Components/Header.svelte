@@ -25,8 +25,12 @@ import { page } from "$app/stores";
         <img src="../src/assets/search.png" alt="Search" class="search-icon">
       </div>
 
+    <a href="/Sign Up" class="user-icon">
+        <img src="../src/assets/user.png" alt="" />
+    </a>
+
     <a href="/Cart" class="cart-icon">
-        <img src="../src/assets/cart.png" alt="" />
+        <img src="../src/assets/cart2.png" alt="" />
     </a>
 
 </div>
@@ -74,10 +78,23 @@ import { page } from "$app/stores";
         color: white;
     }
 
+    .cart-icon {
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+    }
+
     .cart-icon img {
+        width: 28px; 
+        height: 28px;
+        margin-top: 3px;
+    }
+
+    .user-icon img {
         width: 25px; 
         height: 25px;
-        margin-right: 16px; 
+        margin-right: 5px; 
+        margin-left: 5px;
         text-align: center;
         
     }
