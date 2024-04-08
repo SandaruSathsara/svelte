@@ -20,12 +20,22 @@
   
 <h1>Women</h1>
 
+<div class="posts">
+    {#each posts as post (post.id) }
+    <h2>{post.title}. $ {post.price}</h2>
+    <p>{post.description}</p>
+    <img src={post.images} alt=""/>
+    <hr />
+    {:else}
+    <p>Loading...</p>
+    {/each}
+</div>
 
-{#each posts as post (post.id) }
-<h2>{post.title}. $ {post.price}</h2>
-<p>{post.description}</p>
-<img  src={post.images} alt=""/>
-<hr />
-{:else}
-<p>loading...</p>
-{/each}
+<style>
+    .posts {
+        padding-bottom: 50px;
+    }
+</style>
+
+
+

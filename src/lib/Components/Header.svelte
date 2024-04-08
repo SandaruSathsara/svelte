@@ -100,7 +100,7 @@ import { page } from "$app/stores";
     }
 
     .logo-icon{
-        width: 50px; 
+        width: 55px; 
         height: 20px;
         margin-right: 16px; 
         text-align: center;

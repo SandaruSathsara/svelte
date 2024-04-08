@@ -1,27 +1,22 @@
 <script>
-  
   import { addItemToCart } from '../Cart/cart'; 
-
   
   let items = [
     { id: 1, name: 'Nike Air Jordan 1 Low', image: '../src/assets/Men Shoe.jpeg', count: 1 },
     { id: 2, name: 'Nike Dunk Low Retro', image: '../src/assets/Nike Dunk Low Retro.png', count: 1 }
   ];
-
   
   // @ts-ignore
   function addToCart(item) {
     addItemToCart(item);
     alert(`${item.name} is successfully added to the cart!`);
   }
-
   
   // @ts-ignore
   function increaseCount(item) {
     item.count++;
     items = [...items];
   }
-
   
   // @ts-ignore
   function decreaseCount(item) {
@@ -35,7 +30,7 @@
 <div class="container">
   {#each items as item (item.id)}
     <div class="card">
-      <img src="{item.image}" alt="{item.name}" style="width: 300px; height: 300px;" />
+      <img src="{item.image}" alt="{item.name}" />
       <p class="name">{item.name}</p>
   
       <div class="counter">
@@ -49,57 +44,53 @@
   {/each}
 </div>
 
-
-
 <style>
+
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
 }
 
 .card {
-  width: 50%;
-  margin-bottom: 20px;
+  flex: 0 0 calc(50% - 40px);
+  margin: 20px;
   text-align: center; 
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
-.card p {
-  margin-top: 10px;
+.card img {
+  width: 40%;
+  height: auto;
 }
 
 .name {
-  margin-top: 10px; 
+  margin: 10px 0;
   font-weight: bold; 
-  font-size: 24px;
-  font-family: sans-serif;
+  font-size: 18px;
 }
 
 .counter {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .counter button {
-  font-size: 20px;
+  font-size: 18px;
   padding: 5px 10px;
   cursor: pointer;
 }
 
 .counter span {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 10px;
 }
 
 .cart-button {
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px 20px;
   cursor: pointer;
-  background-color: blue;
+  background-color: black;
   color: white;
   border-radius: 10px;
   border: none;
@@ -107,10 +98,17 @@
 }
 
 .cart-button:hover {
-  background-color: #007bff;
+  background-color: greenyellow;
 }
 
 .cart-button:active {
-  background-color: #0056b3;
+  background-color: greenyellow;
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
 </style>

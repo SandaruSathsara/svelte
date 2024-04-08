@@ -25,6 +25,11 @@ p {
     font-size: 1em; 
 }
 
-
+@media screen and (max-width: 768px) {
+    .footer {
+        position: relative; 
+        bottom: auto; 
+    }
+}
 
 </style>
