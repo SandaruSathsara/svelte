@@ -1,93 +1,114 @@
 <script>
+  
+  import { addItemToCart } from '../Cart/cart'; 
 
-  let count = 0;
+  
+  let items = [
+    { id: 1, name: 'Nike Air Jordan 1 Low', image: '../src/assets/Men Shoe.jpeg', count: 1 },
+    { id: 2, name: 'Nike Dunk Low Retro', image: '../src/assets/Nike Dunk Low Retro.png', count: 1 }
+  ];
 
-  function increaseCount() {
-    count++;
+  
+  // @ts-ignore
+  function addToCart(item) {
+    addItemToCart(item);
   }
 
-  function decreaseCount() {
-    if (count > 0) {
-      count--;
+  
+  // @ts-ignore
+  function increaseCount(item) {
+    item.count++;
+    items = [...items];
+  }
+
+  
+  // @ts-ignore
+  function decreaseCount(item) {
+    if (item.count > 1) { 
+      item.count--;
+      items = [...items];
     }
   }
-
-  function cart() {
-    if (count > 0) {
-      alert("Item is successfully added to the cart!");
-    }
-  }
-
 </script>
 
-
 <div class="container">
-    
+  {#each items as item (item.id)}
     <div class="card">
-        <img src="../src/assets/Men Shoe.jpeg" alt="Nike Air Jordan 1 Low" style="width: 300px; height: 300px;" />
+      <img src="{item.image}" alt="{item.name}" style="width: 300px; height: 300px;" />
+      <p class="name">{item.name}</p>
+  
+      <div class="counter">
+        <button on:click={() => decreaseCount(item)}>-</button>
+        <span>{item.count}</span>
+        <button on:click={() => increaseCount(item)}>+</button>
       </div>
   
-    
-    <div class="counter">
-      <button on:click={decreaseCount}>-</button>
-      <span>{count}</span>
-      <button on:click={increaseCount}>+</button>
+      <button class="cart-button" on:click={() => addToCart(item)}>Add to Cart</button>
     </div>
-  
+  {/each}
+</div>
 
-        <button class="cart-button" on:click={cart}>Add to Cart</button>
 
 
-  </div>
-
-  <style>
-
+<style>
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
 
-  .card {
-    
-    margin-bottom: 20px;
-  }
+.card {
+  width: 50%;
+  margin-bottom: 20px;
+  text-align: center; 
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
-  .counter {
-    
-    margin-bottom: 20px;
-  }
+.card p {
+  margin-top: 10px;
+}
 
-  .counter button {
-    font-size: 20px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
+.name {
+  margin-top: 10px; 
+  font-weight: bold; 
+  font-size: 24px;
+  font-family: sans-serif;
+}
 
-  .counter span {
-    font-size: 20px;
-    margin: 0 10px;
-  }
+.counter {
+  margin-bottom: 20px;
+}
 
-  .cart-button {
-    font-size: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: blue; 
-    color: white; 
-    border-radius: 10px; 
-    border: none; 
-    transition: background-color 0.3s ease; 
-  }
+.counter button {
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
 
-  .cart-button:hover {
-    background-color: #007bff; 
-  }
+.counter span {
+  font-size: 20px;
+  margin: 0 10px;
+}
 
-  .cart-button:active {
-    background-color: #0056b3; 
-  }
+.cart-button {
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
 
-  </style>
+.cart-button:hover {
+  background-color: #007bff;
+}
+
+.cart-button:active {
+  background-color: #0056b3;
+}
+</style>

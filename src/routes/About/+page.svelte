@@ -2,10 +2,12 @@
     let description = '';
     let showText = false; 
 
+    // @ts-ignore
     function handleSubmit(event) {
         event.preventDefault();
     }
 
+    // @ts-ignore
     function handleInput(event) {
         
         description = event.target.value.replace(/[^a-zA-Z]/g, '');
