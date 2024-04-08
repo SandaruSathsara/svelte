@@ -12,6 +12,7 @@
   // @ts-ignore
   function addToCart(item) {
     addItemToCart(item);
+    alert(`${item.name} is successfully added to the cart!`);
   }
 
   
