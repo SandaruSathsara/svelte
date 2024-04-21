@@ -1,0 +1,28 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type WomenSneakers{
+  id: ID!
+  name: String!
+  price: Float!
+  description: String!
+}
+
+type MenSneakers{
+  id: ID!
+  name: String!
+  price: Float!
+  description: String!
+}
+
+type Query {
+  mensneakers: [MenSneakers]!
+  womensneakers: [WomenSneakers]!
+}
+
+
+type Mutation {
+  createWomenSneaker(id:ID,name:String,price:Float,description:String):WomenSneakers
+  createMenSneaker(id:ID,name:String,price:Float,description:String):MenSneakers
+}

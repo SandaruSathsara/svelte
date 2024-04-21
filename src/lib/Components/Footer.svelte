@@ -4,7 +4,7 @@
 
 
 <div class="footer">
-    <p>Footer</p>
+    <p>© 2024 Nike, Inc. All Rights Reserved</p>
   </div>
 
 <style>
