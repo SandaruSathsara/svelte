@@ -1,40 +1,27 @@
 <script>
-    let description = '';
-    let showText = false; 
+  import { queryStore, gql, getContextClient } from "@urql/svelte";
 
-    // @ts-ignore
-    function handleSubmit(event) {
-        event.preventDefault();
+  const GET_USERS = gql`
+    query {
+      mensneakers {
+        id
+        name
+        price
+        description
+      }
     }
-
-    // @ts-ignore
-    function handleInput(event) {
-        
-        description = event.target.value.replace(/[^a-zA-Z]/g, '');
-    }
-
-    function toggleTextVisibility() {
-        showText = !showText; 
-    }
+  `;
+  // Fetch data using the queryStore
+  const todos = queryStore({
+    client: getContextClient(),
+    query: GET_USERS,
+  });
 </script>
 
-<h1>Form</h1>
-
-<form method="POST" on:submit={handleSubmit}>
-    <label>
-        Type your name:
-        <input
-            name="description"
-            autocomplete="off"
-            required
-            bind:value={description}
-            on:input={handleInput}
-        />
-    </label>
-</form>
-
-<button on:click={toggleTextVisibility}>Submit</button> 
-
-{#if showText}
-    <p>{description}</p> 
+{#if $todos.fetching}
+  <p>Loading...</p>
+{:else if $todos.error}
+  <p>Oh no... {$todos.error?.message}</p>
+{:else}
+   <pre>{JSON.stringify($todos.data, null, 2)}</pre>
 {/if}

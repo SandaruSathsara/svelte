@@ -27,6 +27,8 @@
   }
 </script>
 
+<h1>Men Sneakers</h1>
+
 <div class="container">
   {#each items as item (item.id)}
     <div class="card">
@@ -103,6 +105,13 @@
 
 .cart-button:active {
   background-color: greenyellow;
+}
+
+h1{
+
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
